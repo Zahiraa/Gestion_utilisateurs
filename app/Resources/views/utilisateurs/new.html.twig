@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+{% form_theme form 'bootstrap_3_layout.html.twig' %}
+
+{% block body %}
+    <h1 class="text-center">Utilisateur creation</h1>
+<hr>
+      <div class="row">
+        <div class="col-md-5 ">
+            
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+            
+            <br><br>
+    <ul class="inline list-unstyled">
+      <li class="list-inline-item">  
+             <input type="submit" class="btn btn-success" value="Create" />
+                   {{ form_end(form) }}
+        </li>
+   
+         <li class="list-inline-item">
+        
+            <button class="btn btn-info" id="blist"><a href="{{ path('utilisateurs_index') }}">Back to the list</a></button>
+        </li>
+    </ul>
+            </div>
+      </div>
+
+{% endblock %}
